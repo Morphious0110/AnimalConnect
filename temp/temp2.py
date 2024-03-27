@@ -44,19 +44,17 @@ class Campaign_Details:
         whatsapp_image = Image.open("images/whatsapp (1).png")
         whatsapp_photo = ImageTk.PhotoImage(whatsapp_image)
 
-        whatsappButton = Button(campaign_frame, image=whatsapp_photo, bg='white', command=whatsapp_clicked, bd=0,
+        whatsappButton = Button(campaign_frame, image=whatsapp_photo, bg='white', command=self.whatsapp_clicked, bd=0,
                                 padx=5, pady=15)
         whatsappButton.image = whatsapp_photo
         whatsappButton.grid(row=4)
-
-
-def whatsapp_clicked(campaign):
-    print("redirecting to whatsapp chat")
-    # vedant= +918779784305
-    # eesha = 9653360204
-    phone_number = campaign
-    whatsapp_url = f"https://wa.me/{phone_number}"
-    webbrowser.open(whatsapp_url)
+    def whatsapp_clicked(self):
+        print("redirecting to whatsapp chat")
+        # vedant= +918779784305
+        # eesha = 9653360204
+        number = self.campaign_contact_number
+        whatsapp_url = f"https://wa.me/{number}"
+        webbrowser.open(whatsapp_url)
 
 
 def append_campaign(campaign, campaign_list):
