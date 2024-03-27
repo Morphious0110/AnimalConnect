@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import messagebox
 from sidebar import create_sidebar
-from temp2 import campaign_list, Campaign_Details, append_campaign
+from viewCampaign import campaign_list, Campaign_Details, append_campaign
 
 
 def campaign_add():

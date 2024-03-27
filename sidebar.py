@@ -1,15 +1,12 @@
 from tkinter import *
 from PIL import Image, ImageTk
 import subprocess
-
-
 def open_lecture_page():
     print("Opening Lecture Page...")
     subprocess.run(["python", "lecture_page.py"])
 def open_Volunteer_page():
     print("Opening Volunteer Page...")
     subprocess.run(["python", "Volunteer_page.py"])
-
 def open_teacher_section():
     print("Opening Teacher Section Page...")
     subprocess.run(["python", "teacher_section.py"])
