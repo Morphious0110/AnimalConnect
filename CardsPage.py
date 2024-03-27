@@ -4,7 +4,17 @@ from tkinter import *
 from tkinter import filedialog
 from PIL import Image, ImageTk
 from sidebar import create_sidebar  # Import the create_sidebar function
+def open_lecture_page():
+    print("Opening Lecture Page...")
 
+def open_Volunteer_page():
+    print("Opening Volunteer Page...")
+
+def open_teacher_section():
+    print("Opening Teacher Section Page...")
+
+def open_Rescue():
+    print("Opening Rescue Page...")
 def add_card(name, address, phone, photo=None):
     # Create a new card frame
     card_frame = tk.Frame(cards_frame, bg="white", bd=2, relief=tk.RIDGE)
@@ -99,7 +109,7 @@ def upload_image():
 root = Tk()
 root.title("Animal Connect")
 root.geometry("800x600+100+100")
-sidebar, buttons = create_sidebar(root)
+topbar,sidebar, buttons = create_sidebar(root,open_Volunteer_page,open_lecture_page,open_Rescue,open_teacher_section)
 
 # Create database and table if they don't exist
 create_database()

@@ -2,7 +2,27 @@ from tkinter import *
 import webview
 from sidebar import create_sidebar  # Import the create_sidebar function
 import geocoder
+import subprocess
+def open_lecture_page():
+    print("Opening Lecture Page...") 
+    root.destroy()
 
+    subprocess.run(["python", "lecture_page.py"])
+def open_Volunteer_page():
+    print("Opening Volunteer Page...")
+    root.destroy()
+
+    subprocess.run(["python", "Volunteer_page.py"])
+def open_teacher_section():
+    print("Opening Teacher Section Page...")
+    root.destroy()
+
+    subprocess.run(["python", "teacher_section.py"])
+def open_Rescue():
+    print("Opening Rescue Page...")
+    root.destroy()
+
+    subprocess.run(["python", "Rescue.py"])
 
 def open_google_maps():
     # Get user's location
