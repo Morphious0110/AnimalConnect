@@ -1,6 +1,8 @@
 from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import messagebox
+import webbrowser
+
 
 
 class Campaign_Details:
@@ -38,6 +40,24 @@ class Campaign_Details:
         campaign_contact_value = Label(campaign_frame, text=self.campaign_contact_number, font=('Microsoft Yahei UI Light', 10), bg='white', fg='firebrick1')
         campaign_contact_value.grid(row=3, column=1, sticky='w')
 
+        # Resize the WhatsApp logo image
+        whatsapp_image = Image.open("images/whatsapp (1).png")
+        whatsapp_photo = ImageTk.PhotoImage(whatsapp_image)
+
+        whatsappButton = Button(campaign_frame, image=whatsapp_photo, bg='white', command=whatsapp_clicked, bd=0,
+                                padx=5, pady=15)
+        whatsappButton.image = whatsapp_photo
+        whatsappButton.grid(row=4)
+
+
+def whatsapp_clicked(campaign):
+    print("redirecting to whatsapp chat")
+    # vedant= +918779784305
+    # eesha = 9653360204
+    phone_number = campaign
+    whatsapp_url = f"https://wa.me/{phone_number}"
+    webbrowser.open(whatsapp_url)
+
 
 def append_campaign(campaign, campaign_list):
     campaign_list.append(campaign)
@@ -48,8 +68,8 @@ def append_campaign(campaign, campaign_list):
 campaign_list = []
 
 # Create some sample Campaign_Details objects
-campaign1 = Campaign_Details("Campaign 1", "Location 1", "Description 1", "9324643221")
-campaign2 = Campaign_Details("Campaign 2", "Location 2", "Description 2", "0987654321")
+campaign1 = Campaign_Details("vedant camp", "Location 1", "Description 1", "+918779784305")
+campaign2 = Campaign_Details("eesha camp", "Location 2", "Description 2", "9653360204")
 
 # Append campaigns to the list
 append_campaign(campaign1, campaign_list)
