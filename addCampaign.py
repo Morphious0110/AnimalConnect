@@ -10,13 +10,13 @@ def open_lecture_page():
     root.destroy()
     subprocess.run(["python", "lecture_page.py"])
 
-def open_Volunteer_page():   
+def open_adoption_page():
     root.destroy()
-    subprocess.run(["python", "Volunteer_page.py"])
+    subprocess.run(["python", "adoption_page.py"])
 
 def open_teacher_section():   
     root.destroy()
-    subprocess.run(["python", "teacher_section.py"])
+    subprocess.run(["python", "adoption_page.py"])
 
 def open_Rescue():
     root.destroy()
@@ -29,7 +29,7 @@ root = Tk()
 root.title("Animal Connect")
 root.geometry("800x600+100+100")
 
-topbar, sidebar, buttons = create_sidebar(root, open_lecture_page, open_Volunteer_page, open_teacher_section, open_Rescue)
+topbar, sidebar, buttons = create_sidebar(root, open_lecture_page, open_adoption_page, open_teacher_section, open_Rescue)
 frame = Frame(root, bg='white')
 frame.place(x=162, y=0)  # Adjusted position to be next to the sidebar
 root.title("Volunteer Page")

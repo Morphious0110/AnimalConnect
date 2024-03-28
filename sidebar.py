@@ -4,18 +4,18 @@ import subprocess
 def open_lecture_page():
     print("Opening Lecture Page...")
     subprocess.run(["python", "lecture_page.py"])
-def open_Volunteer_page():
+def open_adoption_page():
     print("Opening Volunteer Page...")
-    subprocess.run(["python", "Volunteer_page.py"])
+    subprocess.run(["python", "adoption_page.py"])
 def open_teacher_section():
     print("Opening Teacher Section Page...")
-    subprocess.run(["python", "teacher_section.py"])
+    subprocess.run(["python", "adoption_page.py"])
 def open_Rescue():
     print("Opening Rescue Page...")
     subprocess.run(["python", "Rescue.py"])
 
 
-def create_sidebar(root,open_Volunteer_page,open_lecture_page,open_Rescue,open_teacher_section):
+def create_sidebar(root,open_adoption_page,open_lecture_page,open_Rescue,open_teacher_section):
     # Create the top bar (navbar)
     topbar = Frame(root, bg="#ed5876", width=600, height=50)
     topbar.pack(side=TOP, fill=X)
@@ -23,7 +23,7 @@ def create_sidebar(root,open_Volunteer_page,open_lecture_page,open_Rescue,open_t
     title = Button(topbar, text="Animal Connect", font=("Arial", 15, "bold"), bd=0, bg="#ed5876", fg="#ffffff", activebackground='#eb4163')
     title.pack(side=LEFT, padx=20, pady=10)
 
-    user_icon_image = Image.open("Images/settings_icon.png").resize((16, 16))
+    user_icon_image = Image.open("images/settings_icon.png").resize((16, 16))
     user_icon_photo = ImageTk.PhotoImage(user_icon_image)
     user_icon = Label(topbar, image=user_icon_photo, bg="#ed5876")
     user_icon.image = user_icon_photo
@@ -37,7 +37,7 @@ def create_sidebar(root,open_Volunteer_page,open_lecture_page,open_Rescue,open_t
     sidebar.pack(side=LEFT, fill=Y)
 
     menu_items = [
-        ("Volunteer", "home_icon.png", open_Volunteer_page),
+        ("Volunteer", "home_icon.png", open_adoption_page),
         ("Donation", "lecture_icon.png", open_lecture_page),
         ("Adoption", "user_icon.png", open_teacher_section),
         ("Rescue", "teacher_icon.png", open_Rescue),

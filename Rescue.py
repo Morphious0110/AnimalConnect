@@ -8,16 +8,16 @@ def open_lecture_page():
     root.destroy()
 
     subprocess.run(["python", "lecture_page.py"])
-def open_Volunteer_page():
+def open_adoption_page():
     print("Opening Volunteer Page...")
     root.destroy()
 
-    subprocess.run(["python", "Volunteer_page.py"])
+    subprocess.run(["python", "adoption_page.py"])
 def open_teacher_section():
     print("Opening Teacher Section Page...")
     root.destroy()
 
-    subprocess.run(["python", "teacher_section.py"])
+    subprocess.run(["python", "adoption_page.py"])
 def open_Rescue():
     print("Opening Rescue Page...")
     root.destroy()

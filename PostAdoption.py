@@ -7,12 +7,12 @@ import tkinter as tk
 def open_lecture_page():
     root.destroy()
     subprocess.run(["python", "lecture_page.py"])
-def open_Volunteer_page():   
+def open_adoption_page():
     root.destroy()
-    subprocess.run(["python", "Volunteer_page.py"])
+    subprocess.run(["pythoopen_adoption_page.py"])
 def open_teacher_section():   
     root.destroy()
-    subprocess.run(["python", "teacher_section.py"])
+    subprocess.run(["python", "adoption_page.py"])
 def open_Rescue():
     root.destroy()
 
@@ -30,7 +30,7 @@ def add_card(name, address, phone):
 root = tk.Tk()
 root.title("Animal Connect")
 root.geometry("800x600+100+100")
-topbar, sidebar, buttons = create_sidebar(root, open_lecture_page, open_Volunteer_page, open_teacher_section, open_Rescue)
+topbar, sidebar, buttons = create_sidebar(root, open_lecture_page, open_adoption_page, open_teacher_section, open_Rescue)
 
 def switch_to_main_menu():
     cards_frame.pack_forget()  # Hide the cards frame if it's currently displayed
