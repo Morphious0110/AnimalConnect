@@ -39,8 +39,8 @@ def create_sidebar(root,open_Volunteer_page,open_lecture_page,open_Rescue,open_t
     menu_items = [
         ("Volunteer", "home_icon.png", open_Volunteer_page),
         ("Donation", "lecture_icon.png", open_lecture_page),
-        ("Adoption", "user_icon.png", open_teacher_section),
-        ("Rescue", "teacher_icon.png", open_Rescue),
+        ("Rescue", "user_icon.png", open_teacher_section),
+        ("Adoption", "teacher_icon.png", open_Rescue),
     ]
 
     buttons = []

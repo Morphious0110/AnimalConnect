@@ -3,9 +3,27 @@ from tkinter import filedialog
 from PIL import Image, ImageTk
 from tkinter import messagebox
 from sidebar import create_sidebar  # Import the create_sidebar function
+import subprocess
+def viewButton():
+    root.destroy()
+    subprocess.run(["python", "Card.py"])
 
-def open_volunteer_page():
+def open_lecture_page():
+    print("Opening Lecture Page...") 
+    root.destroy()
+    subprocess.run(["python", "lecture_page.py"])
+def open_Volunteer_page():
     print("Opening Volunteer Page...")
+    root.destroy()
+    subprocess.run(["python", "Volunteer_page.py"])
+def open_teacher_section():
+    print("Opening Teacher Section Page...")
+    root.destroy()
+    subprocess.run(["python", "teacher_section.py"])
+def open_Rescue():
+    print("Opening Rescue Page...")
+    root.destroy()
+    subprocess.run(["python", "Rescue.py"])
 
 def open_image():
     # Open a file dialog to select an image file
@@ -31,9 +49,6 @@ def open_image():
         image_label = Label(frame, image=photo)
         image_label.photo = photo  # Keep a reference to avoid garbage collection
         image_label.grid(row=2, column=0, padx=40, pady=(12, 0))
-
-
-
 def newPost():
     pet_name = nameEntry.get()
     messagebox.showinfo("Adoption Information", f"{pet_name} is ready to get adopted!")
@@ -49,7 +64,8 @@ root.title("Animal Connect")
 root.geometry("800x600+100+100")
 
 # Use the create_sidebar function to create the sidebar
-sidebar, buttons = create_sidebar(root)
+topbar,sidebar, buttons = create_sidebar(root,open_Volunteer_page,open_lecture_page,open_Rescue,open_teacher_section)
+
 
 # # Create a frame for the buttons in the white portion
 # button_frame = Frame(root, bg="white")
@@ -114,8 +130,6 @@ postButton.grid(row=12,column=0,padx=2,pady=13)
 # Insert a space between the existing buttons and the new ones
 # Label(button_frame, text="").pack(side=TOP, pady=10)
 
-# Configure button commands
-for button in buttons:
-    button.config(command=open_volunteer_page)
+
 
 root.mainloop()

@@ -10,7 +10,7 @@ def login_user():
         messagebox.showerror('Error', 'All fields are required')
     else:
         try:
-            con = pymysql.connect(host='localhost', user='root', password='v2wcoder@mysql#123', database='userdata')
+            con = pymysql.connect(host='localhost', user='root', password='Palve@08', database='userdata')
             mycursor = con.cursor()
 
             query = 'select * from data where username=%s and password=%s'
@@ -31,7 +31,7 @@ def login_user():
 def open_main_page():
     print("Opening main page...")
     login_window.destroy()
-    subprocess.run(["python", "new.py"])
+    subprocess.run(["python", "Home.py"])
 
 def open_signup_page():
     login_window.destroy()

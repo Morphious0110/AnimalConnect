@@ -2,12 +2,9 @@ from tkinter import *
 import tkinter as tk
 from sidebar import create_sidebar  # Import the create_sidebar function
 import subprocess
-
-
 def viewButton():
     root.destroy()
     subprocess.run(["python", "Card.py"])
-
 def open_lecture_page():
     print("Opening Lecture Page...") 
     root.destroy()
