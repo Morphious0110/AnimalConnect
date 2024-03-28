@@ -8,16 +8,16 @@ def open_lecture_page():
     root.destroy()
 
     subprocess.run(["python", "lecture_page.py"])
-def open_Volunteer_page():
+def open_adoption_page():
     print("Opening Volunteer Page...")
     root.destroy()
 
-    subprocess.run(["python", "Volunteer_page.py"])
+    subprocess.run(["python", "adoption_page.py"])
 def open_teacher_section():
     print("Opening Teacher Section Page...")
     root.destroy()
 
-    subprocess.run(["python", "teacher_section.py"])
+    subprocess.run(["python", "adoption_page.py"])
 def open_Rescue():
     print("Opening Rescue Page...")
     root.destroy()
@@ -29,7 +29,7 @@ root.title("Animal Connect")
 root.geometry("800x600+100+100")
 
 # Call create_sidebar with the required arguments
-topbar, sidebar, buttons = create_sidebar(root, open_lecture_page, open_Volunteer_page, open_teacher_section, open_Rescue)
+topbar, sidebar, buttons = create_sidebar(root, open_lecture_page, open_adoption_page, open_teacher_section, open_Rescue)
 
 # Add specific content for the lecture page
 # label = Label(root, text="Lecture Page Content")

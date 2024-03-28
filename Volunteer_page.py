@@ -69,7 +69,7 @@ def open_Volunteer_page():
 
 def open_teacher_section():
     root.destroy()
-    subprocess.run(["python", "teacher_section.py"])
+    subprocess.run(["python", "adoption_page.py"])
 
 
 def open_Rescue():
